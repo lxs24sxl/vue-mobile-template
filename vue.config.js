@@ -2,7 +2,7 @@ const path = require('path');
 function resolve( dir ) {
   return path.join(__dirname, dir );
 }
-
+console.log( "process.env: ",process.env.NODE_ENV );
 module.exports = {
   // 基本路径
   baseUrl: "/",
