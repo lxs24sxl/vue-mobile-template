@@ -10,7 +10,7 @@ const service = axios.create({
 // request拦截器
 service.interceptors.request.use(config => {
   if ( store.getters.token ) {
-    config.headers['X-Token'] = "linxiaoshun";
+    config.headers['X-Token'] = "ldinxiaoshun";
   }
   return config;
 }, error => {

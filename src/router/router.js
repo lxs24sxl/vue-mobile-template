@@ -1,7 +1,9 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from './views/Home.vue'
-import About from './views/About.vue'
+import Home from '../views/Home.vue'
+
+const _import = require('./_import_' + process.env.NODE_ENV);
+import About from '../views/About.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -9,12 +11,12 @@ export default new Router({
     {
       path: '/',
       name: 'home',
-      component: Home
+      component: _import("Home")
     },
     {
       path: '/about',
       name: 'about',
-      component: About
+      component: _import("About")
     }
   ]
 })
