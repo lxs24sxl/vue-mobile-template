@@ -1,11 +1,57 @@
 <!DOCTYPE html>
-<html>
+  <html>
   <head>
     <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  
+    <!-- QQ -->
+    <!-- 设置锁定横屏、竖屏显示模式，portrait（横屏），landscape（竖屏）-->
+        <meta name="x5-orientation" content="landscape">
+    <!-- 设置全屏显示页面 -->
+        <meta name="x5-fullscreen" content="true">
+    <!-- 360 -->
+    <!-- 设置 360 浏览器渲染模式：webkit 为极速内核，ie-comp 为 IE 兼容内核，ie-stand 为 IE 标准内核。 -->
+        <meta name="renderer" content="webkit">
+    <!--     360 浏览器就会在读取到这个标签后，立即切换对应的极速核。 另外为了保险起见再加入 -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <!-- uc -->
+    <!-- 1.设置屏幕方向：portrait为横屏，landscape为竖屏； -->
+    　　<meta name="screen-orientation" content="landscape">
+    <!-- 2.设置全屏； -->
+    　　<meta name="full-screen" content="yes">
+
+    <!-- <meta name="viewport" content="width=device-width,initial-scale=1.0"> -->
+    <meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=no" name="viewport">
+    <!-- Apple IOS原生浏览器 -->
+    <!-- 添加到主屏后设置状态栏的背景颜色； -->
+        <meta content="black" name="apple-mobile-web-app-status-bar-style">
+    <!-- 忽略数字自动识别为电话号码； -->
+        <meta name="format-detection" content="telephone=no" />
+    <!-- 忽略数字自动识别为邮箱 -->
+        <meta name="format-detection" content="email=no">
+    <!-- 启动WebApp全屏模式； -->
+        <meta name="apple-mobile-web-app-capable" content="yes" />
+        <script type="text/javascript">
+          var MP_CUR_TIME=+new Date;!function(e){var t=e.document,n=t.documentElement,i=e.devicePixelRatio||1,a="orientationchange"in e?"orientationchange":"resize",d=function(){var e=n.getBoundingClientRect().width||360;(1==i||e>720)&&(e=720),n.style.fontSize=e/7.2+"px"};n.setAttribute("data-dpr",i),t.addEventListener&&(e.addEventListener(a,d,!1),"complete"===t.readyState||t.addEventListener("DOMContentLoaded",function(){setTimeout(d)},!1))}(window)
+        </script>
+    <style type="text/css">
+      /*html{font-size:10px}
+      @media screen and (min-width:321px) and (max-width:375px){html{font-size:11px}}
+      @media screen and (min-width:376px) and (max-width:414px){html{font-size:12px}}
+      @media screen and (min-width:415px) and (max-width:639px){html{font-size:15px}}
+      @media screen and (min-width:640px) and (max-width:719px){html{font-size:20px}}
+      @media screen and (min-width:720px) and (max-width:749px){html{font-size:22.5px}}
+      @media screen and (min-width:750px) and (max-width:799px){html{font-size:23.5px}}
+      @media screen and (min-width:800px){html{font-size:25px}}*/
+      html, body {
+        margin: 0;
+        padding: 0;
+      }
+    </style>
     <link rel="icon" href="<%= BASE_URL %>favicon.ico">
     <title>vue3.0移动端模板</title>
+    <meta name="keywords" content="vue.js,mobile,移动端模板,vue移动端模板" />
+    <meta name="description" content="基于vue.js的移动端模板" />
   </head>
   <body>
     <noscript>

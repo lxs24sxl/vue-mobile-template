@@ -1,22 +1,78 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '../views/Home.vue'
-
 const _import = require('./_import_' + process.env.NODE_ENV);
-import About from '../views/About.vue'
-Vue.use(Router)
+
+import Layout from "../views/layout/Layout";
+
+Vue.use(Router);
 
 export default new Router({
   routes: [
     {
       path: '/',
-      name: 'home',
-      component: _import("Home")
+      component: Layout,
+      name: 'index',
+      redirect: "/index",
+      children: [
+        {
+          path: "index",
+          component: _import("index/index")
+        }
+      ]
     },
+
     {
-      path: '/about',
-      name: 'about',
-      component: _import("About")
-    }
+      path: "/category",
+      component: Layout,
+      redirect: "/category/index",
+      name: "category",
+      children: [
+        {
+          path: "index",
+          name: "categoryIndex",
+          component: _import("category/index")
+        }
+      ]
+    },
+
+    {
+      path: "/shoppingCart",
+      component: Layout,
+      redirect: "/shoppingCart/index",
+      children: [
+        {
+          path: "index",
+          name: "shoppingCart",
+          component: _import("shoppingCart/index")
+        }
+      ]
+    },
+    // {
+    //   path: '/home',
+    //   component: Layout,
+    //   redirect: "/home/home",
+    //   meta: { role: ['admin'] },
+    //   children: [
+    //     {
+    //       path: "home",
+    //       name: 'home',
+    //       component: _import("Home")
+    //     }
+    //   ]
+    // },
+
+    // {
+    //   path: '/about',
+    //   name: 'about',
+    //   component: Layout,
+    //   redirect: "/about/about",
+    //   children: [
+    //     {
+    //       path: "about",
+    //       name: 'about',
+    //       component: _import("About")
+    //     }
+    //   ]
+    // }
   ]
 })
