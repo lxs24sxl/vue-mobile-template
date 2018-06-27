@@ -53,7 +53,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$tabHeight: .88rem;
+$tabHeight: .98rem;
 $imgRect: .44rem;
 .tab-item {
   height: $tabHeight;
@@ -84,7 +84,6 @@ $imgRect: .44rem;
   }
 }
 .tab-item.active {
-  
   .item-title {
     color: #26a2ff;
   }

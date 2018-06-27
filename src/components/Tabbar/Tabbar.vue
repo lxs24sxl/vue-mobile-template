@@ -28,7 +28,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-$tabHeight: .88rem;
+$tabHeight: .98rem;
 .tabbar-wrapper {
   position: fixed;
   left: 0;
