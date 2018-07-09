@@ -20,7 +20,11 @@ export default new Router({
         }
       ]
     },
-
+    {
+      path: "/login",
+      component: _import("login/index"),
+      name: "login",
+    },
     {
       path: "/category",
       component: Layout,
@@ -34,7 +38,6 @@ export default new Router({
         }
       ]
     },
-
     {
       path: "/shoppingCart",
       component: Layout,

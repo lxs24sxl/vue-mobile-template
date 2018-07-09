@@ -44,9 +44,6 @@ export default {
     console.log( this.$route);
   },
   methods: {
-    test() {
-      console.log("dsads");
-    }
   }
 }
 </script>

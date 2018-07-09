@@ -19,7 +19,8 @@ module.exports = {
     https: false,
     hotOnly: false,
     proxy: null,    // 设置反向代理
-    before: app => {}
+    before: app => {
+    }
   },
   pluginOptions: {
     

@@ -18,5 +18,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-  
+.app-main {
+  margin-top: .88rem;
+}
 </style>
