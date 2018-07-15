@@ -50,6 +50,18 @@ export default new Router({
         }
       ]
     },
+    {
+      path: "/detail",
+      component: Layout,
+      redirect: "/detail/index",
+      children: [
+        {
+          path: "index",
+          name: "detail",
+          component: _import("detail/index")
+        }
+      ]
+    },
     // {
     //   path: '/home',
     //   component: Layout,

@@ -1,6 +1,8 @@
 <template>
   <div>
     主页
+    <div @click="goToDetail">跳到detail页面</div>
+    <router-view></router-view>
   </div>
 </template>
 
@@ -13,11 +15,15 @@ export default {
   },
   created() {
     console.log("zhuye");
+  },
+  methods: {
+    goToDetail() {
+      this.$router.push({ path: "/detail"});
+    }
   }
 
 }
 </script>
 
 <style>
-  
 </style>
